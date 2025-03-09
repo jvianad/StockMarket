@@ -20,15 +20,25 @@ namespace StockMarket.Controllers
         [HttpGet]
         public async Task<IActionResult> getAll()
         {
-            var stocks = await _context.Stocks.ToListAsync();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var stocks = await _context.Stocks.Include(c=>c.Comments).ToListAsync();
             var stockDto = stocks.Select(s => s.ToStockDto());
             return Ok(stockDto);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> getById([FromRoute] int id)
         {
-            var stock = await _context.Stocks.FindAsync(id);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var stock = await _context.Stocks.Include(c => c.Comments).FirstOrDefaultAsync(i => i.Id == id);
             if(stock == null)
             {
                 return NotFound();
@@ -41,6 +51,11 @@ namespace StockMarket.Controllers
         [HttpPost]
         public async Task<IActionResult> createStock([FromBody] CreateStockRequestDto stockDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var stockmodel = stockDto.ToStockFromCreateDto();
             await _context.Stocks.AddAsync(stockmodel);
             await _context.SaveChangesAsync();
@@ -49,9 +64,14 @@ namespace StockMarket.Controllers
 
 
         [HttpPut]
-        [Route("{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> updateStock([FromRoute] int id, [FromBody] UpdateStockRequestDto updateDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var stockModel = await _context.Stocks.FirstOrDefaultAsync(x => x.Id == id);
             if(stockModel == null)
             {
@@ -70,9 +90,14 @@ namespace StockMarket.Controllers
         }
 
         [HttpDelete]
-        [Route("{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> deleteStock([FromRoute] int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var stockToDelete = await _context.Stocks.FirstOrDefaultAsync(x => x.Id == id);
             if (stockToDelete == null)
             {

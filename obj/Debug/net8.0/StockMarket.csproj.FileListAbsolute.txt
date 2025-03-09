@@ -170,3 +170,5 @@ C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\obj\Debug\net8.0\refin
 C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\obj\Debug\net8.0\StockMarket.pdb
 C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\obj\Debug\net8.0\StockMarket.genruntimeconfig.cache
 C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\obj\Debug\net8.0\ref\StockMarket.dll
+C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\obj\Debug\net8.0\StockMarket.sourcelink.json
+C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\bin\Debug\net8.0\Newtonsoft.Json.dll
