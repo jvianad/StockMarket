@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "StockMarket.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "api/account/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "StockMarket.Dtos.Account.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "StockMarket.Controllers.CommentController",
     "Method": "getAll",
     "RelativePath": "api/comment",

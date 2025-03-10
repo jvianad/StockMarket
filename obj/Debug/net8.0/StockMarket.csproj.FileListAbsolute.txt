@@ -172,3 +172,9 @@ C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\obj\Debug\net8.0\Stock
 C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\obj\Debug\net8.0\ref\StockMarket.dll
 C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\obj\Debug\net8.0\StockMarket.sourcelink.json
 C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Jean Viaña\source\repos\StockMarket\StockMarket\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
